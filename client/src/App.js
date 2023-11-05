@@ -1,10 +1,9 @@
+import FriendGraph from "./FriendGraph";
 
 
 function App() {
   return (
-    <div>
-      hello
-    </div>
+    <FriendGraph />
   );
 }
 
