@@ -1,4 +1,4 @@
-import FriendGraph from "./FriendGraph";
+import FriendGraph from "./components/FriendGraph.js";
 
 
 function App() {

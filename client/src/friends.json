@@ -2,27 +2,33 @@
   "nodes": [
     {
       "id": 0,
-      "name": "Alice"
+      "name": "Alice",
+      "img": "../assets/richard.jpg"
     },
     {
       "id": 1,
-      "name": "Bob"
+      "name": "Bob",
+      "img": "../assets/mark.jpg"
     },
     {
       "id": 2,
-      "name": "Carol"
+      "name": "Carol",
+      "img": "../assets/nicole.jpg"
     },
     {
       "id": 3,
-      "name": "Dave"
+      "name": "Dave",
+      "img": "../assets/richard.jpg"
     },
     {
       "id": 4,
-      "name": "Eve"
+      "name": "Eve",
+      "img": "../assets/suzannah.jpg"
     },
     {
       "id": 5,
-      "name": "Frank"
+      "name": "Frank",
+      "img": "../assets/tree.jpg"
     }
   ],
   "links": [
