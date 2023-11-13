@@ -2,33 +2,33 @@
   "nodes": [
     {
       "id": 0,
-      "name": "Alice",
-      "img": "../assets/richard.jpg"
+      "name": "Marc",
+      "img": "https://tessier-lavigne-lab.stanford.edu/sites/tessier_lavigne_lab/files/styles/hs_small_square_200x200/public/media/image/marc_tessier-lavigne_0.jpeg?h=15e12df2&itok=z9dD7g1I"
     },
     {
       "id": 1,
-      "name": "Bob",
-      "img": "../assets/mark.jpg"
+      "name": "Mark",
+      "img": "https://studentlearning.stanford.edu/sites/g/files/sbiybj17451/files/styles/thumbnail_square/public/media/image/398526410_3592814401002696_5715315441635220155_n_1.jpg?h=a1e1a043&itok=1-3FfVeN"
     },
     {
       "id": 2,
-      "name": "Carol",
-      "img": "../assets/nicole.jpg"
+      "name": "Nicole",
+      "img": "https://studentlearning.stanford.edu/sites/g/files/sbiybj17451/files/styles/medium_square/public/media/image/nicolesegaran_0.jpg?h=018651a0&itok=YL-PDOn-"
     },
     {
       "id": 3,
-      "name": "Dave",
-      "img": "../assets/richard.jpg"
+      "name": "Suzannah",
+      "img": "https://studentlearning.stanford.edu/sites/g/files/sbiybj17451/files/styles/medium_square/public/media/image/suzannahwistreich_0.png?h=a2ce1c9d&itok=Pj8Bl2r-"
     },
     {
       "id": 4,
-      "name": "Eve",
-      "img": "../assets/suzannah.jpg"
+      "name": "Carmel",
+      "img": "https://studentlearning.stanford.edu/sites/g/files/sbiybj17451/files/styles/thumbnail_square/public/media/image/headshot_passport_0.jpeg?h=163d38a3&itok=UCloe0rw"
     },
     {
       "id": 5,
-      "name": "Frank",
-      "img": "../assets/tree.jpg"
+      "name": "Faith",
+      "img": "https://studentlearning.stanford.edu/sites/g/files/sbiybj17451/files/styles/large/public/media/image/faith_0.jpg?itok=uP_gCwxm"
     }
   ],
   "links": [

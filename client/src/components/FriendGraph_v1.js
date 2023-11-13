@@ -1,61 +1,61 @@
-import { useState, useEffect } from 'react';
-import ForceGraph2D from "react-force-graph-2d";
-import friendsData from '../friends.json'
-import ForceGraph from 'react-force-graph-2d';
+import { useEffect, useState } from "react";
+import ForceGraph from "react-force-graph-2d";
+//import friendData from "../friends.json";
+
+function generateRandomGraph(numNodes) {
+  const nodes = Array.from({ length: numNodes }, (_, id) => ({
+    id,
+    name: `Node ${id}`
+  }));
+
+  const links = nodes.map((_, index) => ({
+    source: index,
+    target: Math.floor(Math.random() * numNodes)
+  }));
+
+  return { nodes, links };
+}
+
+const friendData = generateRandomGraph(50);
 
 const FriendGraph = () => {
-  useEffect(() => {
-    const imgs = [
-      'marc.jpg',
-      'mark.jpg',
-      'nicole.jpg',
-      'suzannah.jpg',
-      'richard.jpg',
-      'tree.jpg'
-    ].map(src => {
-      const img = new Image();
-      img.src = `../assets/${src}`;
-      return img;
-    });
+  const [imageCache, setImageCache] = useState([]);
 
-    const graphData = {
-      nodes: img.map((img, id) => ((id, img))),
-      links: [...Array(imgs.length).keys()]
-        .filter(id => id)
-        .map(id => ({
-          source: id,
-          target: Math.round(Math.random() * (id - 1))
-        }))
-    };
+  const handleDrawNodeImg = (node, ctx) => {
+    const size = 12;
+    const img = new Image();
 
-    const Graph = ForceGraph();
-      (document.getElementById('graph'))
-      .nodeCanvasObject(({ img, x, y }, ctx) => {
-        const size = 12;
-        ctx.drawImage(img, x - size / 2, y - size / 2, size, size);
-      })
-      .nodePointerAreaPaint((node, color, ctx) => {
-        const size = 12;
-        ctx.fillStyle = color;
-        ctx.fillRect(node.x - size / 2, node.y - size / 2, size, size); // draw square as pointer trap
-      })
-      .graphData(gData);
-  }, []);
-  
+    img.onload = () => {
+      const width = size;
+      const height = (size * img.height) / img.width; // Maintain aspect ratio
+
+      // Draw the image on the canvas
+      ctx.drawImage(img, node.x - width / 2, node.y - height / 2, width, height);
+
+    }
+
+    img.src = node.img;
+  }
+
   return (
-    <ForceGraph2D
-      graphData={graphData}
-      nodeCanvasObject={(node, ctx, globalScale) => {
-        const size = 12;
-        const img = new Image(100, 100);
-        img.src = node.img;
-        
-        img.onload = () => {
-          ctx.drawImage(img, node.x - size / 2, node.y - size / 2, size, size);
-        }; 
-      }}
+    // <ForceGraph
+    //   graphData={friendData}
+    //   nodeLabel={(node) => node.name}
+    //   linkDirectionalArrowLength={6}
+    //   linkDirectionalArrowRelPos={1}
+    //   nodeCanvasObject={(node, ctx) => handleDrawNodeImg(node, ctx)}
+    //   nodePointerAreaPaint={(node, color, ctx) => {
+    //     const size = 12;
+    //     ctx.fillStyle = color;
+    //     ctx.fillRect(node.x - size / 2, node.y - size / 2, size, size);
+    //   }}
+    // />
+    <ForceGraph 
+      graphData={friendData}
+      linkDirectionalArrowLength={6}
+      linkDirectionalArrowRelPos={1}
     />
   )
-};
+}
 
 export default FriendGraph;
